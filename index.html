@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport"
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="./css/iconfont.css">
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				outline: 0;
+				-webkit-tap-highlight-color: transparent;
+			}
+
+			.container {
+				/* padding-top: 37px;
+				padding-bottom: 43px; */
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+				height: 100%;
+			}
+
+			.header {
+				background-color: rgb(255, 133, 42);
+				background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD8AAAAwCAMAAACR11I4AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAADwUExURUdwTP//////////////////////////7v//7f//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AP//AP//////////////////////////////AP//AP//AP//AP//AP//AP//////AP//AP//AP//AP//AP//AP//////AIlGdUwAAABOdFJOUwD8w3w45vkBBPYt3gqWYYieMGvry+/jvyZmPNAYBx6jbylXNBvaTUjUFA+vsw1Ad4PXUyMSqY3zSw/HEFxDkXO6oepxVMf7pqvePzXRHLxDEf8AAAORSURBVEjHnVZpY6IwEOVSQUABFbxARWu13lq1W2vt9twT//+/WXJBiOjudr6QYx6ZvHmZhOPSTHy09r0c91nLlYLQto317j9AX+SomQ+QDeJZd+h1qrvzIb18P76//cSdNsbXYDBSTRcqaIDPCBvfS4F/PQJ7v0M9AXmrLnfjt0oBa85SZvZ7d0T2/AV0q9hvmTeyQarZ12nLhwYDKOLln4LzVkyE8EbwL2FHzpy6V9TFYGDT0TjuufVrCWTDaO9XxHf1MObJxJrCv1L7d+14VcMfskx7YzL7QI1+Q/hXKnn8aOmmppo4lCbxmPzyfDz++hG2hihfil49Kz4R/0CkU8j9hrnj1nBtfRhmIePo7V4KXr5H+EyKHC0w8dThuDokapC6hWscwP50SioFlUL47cEkZqWbYdNbdUxpet33C9ZBLBZBsCrC63T82KotoO9J+ZxwGsDJYM+X29jcUlFowlnhwTWJRCJMKNmKFUlSc87C7R5NQJ3sGpJVNlk4n1VQQ3HG65a+EX0NenToAx5Gv0DdbBt2u+Hf+M1Qk0NSTDRzlWR5Qk4R6tajE6NDHmeBkE+WIgbPbdGwQeirqTQ9uX6Ou4zHRWUca6qGYygkHRl8Tht6QNf4jAl0zubweKth89Z/KNQs6zATRR05boXyQM1UsoS0KzRcTqxl2jinUnDJpqHrgBJTbD4Ya/4FPwDcqKl4IIusfAHPbxdGk+JPSOJ1vKWVoT9uinNxdmjPcS01q15zEtdMheUfHp1sLAmGfybQXEoN5HJQtlLS00wjmmsGSf3EpcMG7JhTTz6Dn0DJ15P6RdEr0UhYYnlb8OFZSBA1EStb8C0EJ2JzUcWAukdShHiJwu9EcI2CijZnzm9oj3GceHd5Cu9wuWkLkQ7yN8L4ZgTvowGLOt0etdOySA5Y0InTv43gK3TBKztqz33Qnp5oSIrLR5R+rYEGWhyFzyy9Xn5GIUsC3pYVUNEC+4j/Df7Gp2m3NNMA7aWwgpHivMLwGfPeSbn4GwUXkpRdxs+jBeGOZ+IxlSRYMeroJbQwqhT7OPvmlrhFN2bdpsCjwiQhXpyqQEUabUa+lJrdwsciU1GFVruuMaVvv00uL90TvPkPr8ThnDxiWtHYFPF1fwknNNZhQXh0ImYc+gHVHTHvkZMrn2E0GDGvi3wr417AV5lbsH/qol0K360fRoRnVe9rn3qWu6tut9O7SYz9AWZChIYAa6nHAAAAAElFTkSuQmCC);
+				background-repeat: no-repeat;
+				background-size: 27px 20px;
+				background-position: 9px center;
+				width: 100%;
+				padding: 6px 9px 6px 42px;
+			}
+
+			.search {
+				background-color: rgb(255, 78, 34);
+				border-radius: 5px;
+				text-align: center;
+				height: 25px;
+				line-height: 25px;
+				font-size: 15px;
+				color: rgb(240, 224, 220);
+			}
+
+			.banner {
+				width: 100%;
+				height: 120px;
+				position: relative;
+				overflow: hidden;
+			}
+
+			.item {
+				display: inline-block;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+			}
+
+			.img {
+				width: 100%;
+				height: 100%;
+			}
+
+			.tag {
+				position: absolute;
+				left: 0px;
+				bottom: 0px;
+				height: 20px;
+			}
+
+			.nav {
+				height: 186px;
+				width: 100%;
+				position: relative;
+				margin-top: -10px;
+			}
+
+			.maskimg {
+				background-image: url(./img/maskimg.png);
+				height: 10px;
+				width: 100%;
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: 100%;
+				margin-bottom: -2px;
+			}
+
+			.navpanel {
+				display: flex;
+				flex-direction: row;
+				height: 156px;
+				width: 100%;
+				background: rgb(255, 255, 255);
+				overflow-x: auto;
+			}
+
+			.navpanel::-webkit-scrollbar {
+				display: none;
+			}
+
+			.navitem {
+				margin-left: 11.5px;
+			}
+
+			.navsubitem1 {
+				display: flex;
+				flex-direction: column;
+				-webkit-box-align: center;
+				align-items: center;
+				height: 67px;
+				width: 61px;
+				margin-top: 3px;
+			}
+
+			.navsubitme2 {
+				display: flex;
+				flex-direction: column;
+				-webkit-box-align: center;
+				align-items: center;
+				height: 67px;
+				width: 61px;
+				margin-top: 13px;
+			}
+
+			.navitemimg {
+				height: 48px;
+				width: 61px;
+			}
+
+			.navitemtxt {
+				font-size: 11px;
+				line-height: 15px;
+				color: rgb(102, 102, 102);
+				margin-top: 4px;
+			}
+
+			.navscrollbar {
+				display: flex;
+				width: 100%;
+				height: 20px;
+				background-color: rgb(255, 255, 255);
+				-webkit-box-pack: center;
+				justify-content: center;
+				-webkit-box-align: center;
+				align-items: center;
+			}
+
+			.navscrollbarrail {
+				width: 50px;
+				height: 3px;
+				background-color: rgb(212, 216, 222);
+				border-radius: 4px;
+			}
+
+			.navscrollbarblock {
+				width: 20px;
+				height: 3px;
+				background-color: rgb(255, 109, 42);
+				border-radius: 4px;
+				transform: translate(0px);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<div class="search iconfont icon-sousuo">
+					山寨淘宝
+				</div>
+			</div>
+			<div class="banner">
+				<div class="item">
+					<img class="img" src="./img/img1.jpg">
+				</div>
+			</div>
+			<div class="nav">
+				<div class="maskimg"></div>
+				<div class="navpanel">
+					<div class="navitem">
+						<div class="navsubitem1">
+							<img src="./img/navitemimg1-1.png" alt="" class="navitemimg">
+							<p class="navitemtxt">天猫商品</p>
+						</div>
+						<div class="navsubitme2">
+							<img src="./img/navitemimg1-2.png" alt="" class="navitemimg">
+							<p class="navitemtxt">充值中心</p>
+						</div>
+					</div>
+					<div class="navitem">
+						<div class="navsubitem1">
+							<img src="./img/navitemimg2-1.png" alt="" class="navitemimg">
+							<p class="navitemtxt">今日爆款</p>
+						</div>
+						<div class="navsubitme2">
+							<img src="./img/navitemimg2-2.png" alt="" class="navitemimg">
+							<p class="navitemtxt">机票酒店</p>
+						</div>
+					</div>
+					<div class="navitem">
+						<div class="navsubitem1">
+							<img src="./img/navitemimg3-1.png" alt="" class="navitemimg">
+							<p class="navitemtxt">天猫国际</p>
+						</div>
+						<div class="navsubitme2">
+							<img src="./img/navitemimg3-2.png" alt="" class="navitemimg">
+							<p class="navitemtxt">金币庄园</p>
+						</div>
+					</div>
+					<div class="navitem">
+						<div class="navsubitem1">
+							<img src="./img/navitemimg4-1.png" alt="" class="navitemimg">
+							<p class="navitemtxt">饿了么</p>
+						</div>
+						<div class="navsubitme2">
+							<img src="./img/navitemimg4-2.png" alt="" class="navitemimg">
+							<p class="navitemtxt">阿里拍卖</p>
+						</div>
+					</div>
+					<div class="navitem">
+						<div class="navsubitem1">
+							<img src="./img/navitemimg5-1.png" alt="" class="navitemimg">
+							<p class="navitemtxt">天猫超市</p>
+						</div>
+						<div class="navsubitme2">
+							<img src="./img/navitemimg5-2.png" alt="" class="navitemimg">
+							<p class="navitemtxt">淘宝吃货</p>
+						</div>
+					</div>
+					<div class="navitem">
+						<div class="navsubitem1">
+							<img src="./img/navitemimg6-1.png" alt="" class="navitemimg">
+							<p class="navitemtxt">分类</p>
+						</div>
+						<div class="navsubitme2">
+							<img src="./img/navitemimg6-2.png" alt="" class="navitemimg">
+							<p class="navitemtxt">咸鱼</p>
+						</div>
+					</div>
+					<div class="navitem">
+						<div class="navsubitem1">
+							<img src="./img/navitemimg7-1.png" alt="" class="navitemimg">
+							<p class="navitemtxt">天猫美食</p>
+						</div>
+						<div class="navsubitme2">
+							<img src="./img/navitemimg7-2.png" alt="" class="navitemimg">
+							<p class="navitemtxt">会员中心</p>
+						</div>
+					</div>
+					<div class="navitem">
+						<div class="navsubitem1">
+							<img src="./img/navitemimg8-1.png" alt="" class="navitemimg">
+							<p class="navitemtxt">阿里健康</p>
+						</div>
+						<div class="navsubitme2">
+							<img src="./img/navitemimg8-2.png" alt="" class="navitemimg">
+							<p class="navitemtxt">造点新货</p>
+						</div>
+					</div>
+					<div class="navitem">
+						<div class="navsubitem1">
+							<img src="./img/navitemimg9-1.png" alt="" class="navitemimg">
+							<p class="navitemtxt">口碑生活</p>
+						</div>
+						<div class="navsubitme2">
+							<img src="./img/navitemimg9-2.png" alt="" class="navitemimg">
+							<p class="navitemtxt">土货鲜食</p>
+						</div>
+					</div>
+				</div>
+				<div class="navscrollbar">
+					<div class="navscrollbarrail">
+						<div class="navscrollbarblock"></div>
+					</div>
+				</div>
+				
+				<h1>山寨淘宝</h1>
+			</div>
+		</div>
+	</body>
+</html>
