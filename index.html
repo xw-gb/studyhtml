@@ -159,7 +159,21 @@
 				height: 3px;
 				background-color: rgb(255, 109, 42);
 				border-radius: 4px;
-				transform: translate(0px);
+
+			}
+
+			.slide {
+				animation: scroll 2s infinite alternate;
+			}
+
+			@keyframes scroll {
+				from {
+					transform: translate(0px);
+				}
+
+				to {
+					transform: translate(30px);
+				}
 			}
 		</style>
 	</head>
@@ -177,7 +191,7 @@
 			</div>
 			<div class="nav">
 				<div class="maskimg"></div>
-				<div class="navpanel">
+				<div class="navpanel" onscroll="move()">
 					<div class="navitem">
 						<div class="navsubitem1">
 							<img src="./img/navitemimg1-1.png" alt="" class="navitemimg">
@@ -274,9 +288,18 @@
 						<div class="navscrollbarblock"></div>
 					</div>
 				</div>
-				
+
 				<h1>山寨淘宝</h1>
 			</div>
 		</div>
 	</body>
+	<script type="text/javascript">
+		function move() {
+			var navsbb = document.querySelector('.navscrollbarblock');
+			var navp = document.querySelector('.navpanel');
+			var navsbr = document.querySelector('.navscrollbarrail');
+			navsbb.style.marginLeft = navp.scrollLeft / (navp.scrollWidth - navp.clientWidth) * (navsbr.clientWidth - navsbb
+				.clientWidth) + 'px';
+		}
+	</script>
 </html>
