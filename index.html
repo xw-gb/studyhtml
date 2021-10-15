@@ -298,8 +298,11 @@
 			var navsbb = document.querySelector('.navscrollbarblock');
 			var navp = document.querySelector('.navpanel');
 			var navsbr = document.querySelector('.navscrollbarrail');
-			navsbb.style.marginLeft = navp.scrollLeft / (navp.scrollWidth - navp.clientWidth) * (navsbr.clientWidth - navsbb
+			// navsbb.style.marginLeft = navp.scrollLeft / (navp.scrollWidth - navp.clientWidth) * (navsbr.clientWidth - navsbb
+			// 	.clientWidth) + 'px';
+			var delax = navp.scrollLeft / (navp.scrollWidth - navp.clientWidth) * (navsbr.clientWidth - navsbb
 				.clientWidth) + 'px';
+			navsbb.style.transform = 'translate(' + delax + ')';
 		}
 	</script>
 </html>
