@@ -186,12 +186,12 @@
 			</div>
 			<div class="banner">
 				<div class="item">
-					<img class="img" src="./img/img1.jpg">
+					<!-- <img class="img" src="./img/img1.jpg"> -->
 				</div>
 			</div>
 			<div class="nav">
 				<div class="maskimg"></div>
-				<div class="navpanel" onscroll="move()">
+				<div class="navpanel" onscroll="move(event)">
 					<div class="navitem">
 						<div class="navsubitem1">
 							<img src="./img/navitemimg1-1.png" alt="" class="navitemimg">
@@ -294,7 +294,8 @@
 		</div>
 	</body>
 	<script type="text/javascript">
-		function move() {
+		function move(event) {
+			// console.log(event);
 			var navsbb = document.querySelector('.navscrollbarblock');
 			var navp = document.querySelector('.navpanel');
 			var navsbr = document.querySelector('.navscrollbarrail');
@@ -304,5 +305,12 @@
 				.clientWidth) + 'px';
 			navsbb.style.transform = 'translate(' + deltax + ')';
 		}
+	</script>
+	<script type="text/javascript" src="./js/xwswiper.js"> </script>
+	<script type="text/javascript">
+		var imgArr = ['./img/img1.jpg', './img/img2.jpg', './img/img3.jpg', './img/img4.jpg', './img/img5.jpg',
+			'./img/img6.jpg', './img/img7.jpg', './img/img8.jpg'
+		];
+		xwSwiper('.item', imgArr);
 	</script>
 </html>
