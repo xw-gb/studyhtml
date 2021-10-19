@@ -171,7 +171,6 @@ function xwSwiper(selector, imgArr) {
 		</div>
 	`
 	selectorDiv.appendChild(styleDom);
-	console.log(selectorDiv);
 	if (selectorDiv.clientHeight == 0 || selectorDiv.clientWidth == 0) {
 		selectorDiv.style.setProperty('width', '400px');
 		selectorDiv.style.setProperty('height', '200px');
@@ -238,6 +237,35 @@ function xwSwiper(selector, imgArr) {
 			}
 		}
 	}
+
+	function tstart(e) {
+		console.log(e);
+	}
+
+	function tmove(e) {
+		console.log(e);
+	}
+
+	function tend(e) {
+		console.log(e);
+	}
+
+	var tstartx = 0;
+	var tstarty = 0;
+	imglistDiv.addEventListener('touchstart', function(e) {
+		tstartx = e.changedTouches[0].pageX;
+		tstarty = e.changedTouches[0].pageY;
+	});
+	imglistDiv.addEventListener('touchmove', function(e) {
+		// console.log(e);
+	});
+	imglistDiv.addEventListener('touchend', function(e) {
+		if (e.changedTouches[0].pageX - tstartx > 0) {
+			swiperpage('leftbtn');
+		} else if (e.changedTouches[0].pageX - tstartx < 0) {
+			swiperpage('rightbtn');
+		}
+	});
 
 	function swiperpage(btnname) {
 		var curpage = document.querySelector(selector + ' .imgitem' + '.active');
